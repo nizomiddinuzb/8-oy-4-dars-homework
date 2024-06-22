@@ -12,9 +12,9 @@ async function Home() {
   return (
     <div>
       <div className="text-center text-2xl flex flex-wrap justify-between w-[1110px] mx-auto">
-        {data.products.map((item:any) => {
+        {data.products.map((item:any,index:number) => {
           return (
-            <Link className="border-solid border-2 border-sky-500 mb-4 rounded-2xl" href={`/product/${item.id}`}>
+            <Link key={index} className="border-solid border-2 border-sky-500 mb-4 rounded-2xl" href={`/product/${item.id}`}>
               <img className="w-[400px] h-[400px]" src={item.images} alt="" />
               <h1>{item.title}</h1>
             </Link>
